@@ -7,7 +7,7 @@ module.exports = (env) => {
     entry: './src/index.js', // Точка входа для сборки проекта
 
     output: {
-      path: path.resolve(__dirname, 'project'), // Путь для выходного файла сборки
+      path: path.resolve(__dirname, 'dist'), // Путь для выходного файла сборки
       filename: '[name].[contenthash].js', // Имя выходного файла сборки
       clean: true,
     },
@@ -37,7 +37,7 @@ module.exports = (env) => {
 
     devServer: {
       static: {
-        directory: path.join(__dirname, 'project'), // Каталог для статики
+        directory: path.join(__dirname, 'dist'), // Каталог для статики
       },
       open: true, // Автоматически открывать браузер
     },
